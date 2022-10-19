@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <title>AVENUE FASHION</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://css.gg/css' rel='stylesheet'>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__top-bar">
+        <div class="top-bar wrapper">
+            <a class="currency" href="#"> Currency : GBP
+                <div class="arrow">^</div>
+            </a>
+
+            <div class="links">
+                <a href="#">Register</a>
+                <a href="#">Sign In</a>
+                <div class="cart">
+                    <img alt="Cart" src="img/cart.png">
+                    <div class="cart__name">empty
+                        <div class="arrow">^</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="header__nav">
+        <div class="logo"><span style="font-weight: 700">avenue</span> fashion</div>
+        <ul class="nav-pages">
+            <li>Mens</li>
+            <li>Womens</li>
+            <li>The brand</li>
+            <li class="local-stores">Local stores
+                <div class="sub-nav">
+                    <div class="sub-nav__ident"></div>
+                    <div class="sub-nav__content">
+                        <div class="sub-nav-links">
+                            <ul class="sub-links">
+                                casuals
+                                <li>Jackets</li>
+                                <li>Hoodies & Sweatshirts</li>
+                                <li>Polo Shirts</li>
+                                <li>Sportswear</li>
+                                <li>Trousers & Chinos</li>
+                                <li>T-Shirts</li>
+                            </ul>
+                            <ul class="sub-links">
+                                Formal
+                                <li>Jackets</li>
+                                <li> Shirts</li>
+                                <li>Suits</li>
+                                <li> Trousers</li>
+                            </ul>
+                        </div>
+                        <div class="sub-nav-banner">Autumn sale!<br>
+                            up to 50% off
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>Look book</li>
+        </ul>
+
+        <div class="nav-search">
+            <form action="https://google.com//search" method="get">
+                <input class="search-field" name="q" placeholder="Search.." type="text"/>
+                <button class="btn-search" type="submit">
+                    <img alt="Search" class="img-search" src="img/glass.png">
+                </button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<div class="banner">
+    <div class="banner__text">
+        <div class="title">Local stores</div>
+        <div class="subtitle">Find a store near you</div>
+    </div>
+</div>
+
+<div class="stores wrapper">
+    <div class="stores__store">
+        <div class="store-city">London</div>
+        <div class="store-address">180-182 Regent Street, London, W1B 5BT</div>
+        <div class="store-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem.
+            Vestibulum ornare eleifendit
+            massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.
+        </div>
+        <button class="store-button">view Details</button>
+    </div>
+    <div class="stores__store">
+        <div class="store-city">New York</div>
+        <div class="store-address">109 Columbus Circle, New York, NY 10023</div>
+        <div class="store-description">
+            Nunc non posuere nisl. Etiam finibus vel dui nec lobortis. Aliquam egestas, sem
+            quis condimentum venenatis, erat leo fermentum dolor, non sollicitudin massa mi eu nibh. Nullam vitae
+            aliquam dui, non sodales nisl.
+        </div>
+        <button class="store-button">view Details</button>
+    </div>
+    <div class="stores__store">
+        <div class="store-city">Paris</div>
+        <div class="store-address">2133 Rue Saint-Honoré, 75001 Paris</div>
+        <div class="store-description">
+            Ut interdum fermentum blandit. Donec nec lacus egetit mi rhoncus eleifend.
+            Curabitur laoreet nisl eget rutruml auctor. Vestibulum ante ipsum primis in faucibus orcip luctus et
+            ultrices posuere cubilia curae cras ligula.
+        </div>
+        <button class="store-button">view Details</button>
+    </div>
+</div>
+
+<div class="location">
+    <div class="location__map" id="map"></div>
+    <div class="location__info">
+        <div class="location-city">London</div>
+        <div class="location-address">180-182 Regent Street, London, W1B 5BT</div>
+        <div class="location-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem. Vestibulum ornare
+            eleifendit massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.
+        </div>
+        <ul class="contact-ways">
+            <li><img alt="Location" src="img/marker.png">180-182 Regent Street, London, W1B 5BT</li>
+            <li><img alt="Telephone" src="img/phone.png">0123-456-789</li>
+            <li><img alt="WebSite" src="img/site.png">www.yourwebsite.com</li>
+            <li><img alt="Email" src="img/mail.png">support@yourwebsite.com</li>
+            <li><img alt="Working days" src="img/clock.png">Monday-Friday: 9am to 6pm Saturday: 10am to 6pm Sunday: 10am
+                to 2pm
+            </li>
+        </ul>
+        <div class="socials">
+            <a href="#"><img alt="Facebook" src="img/facebook.png"></a>
+            <a href="#"><img alt="Twitter" src="img/twitter.png"></a>
+            <a href="#"><img alt="Instagram" src="img/instagram.png"></a>
+            <a href="#"><img alt="Printerest" src="img/pinterest.png"></a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer__links wrapper">
+        <ul class="footer-links">
+            Information
+            <li>The brand</li>
+            <li>Local stores</li>
+            <li>Customer service</li>
+            <li>Privacy & cookies</li>
+            <li>Site map</li>
+        </ul>
+        <ul class="footer-links">
+            Why buy from us
+            <li>Shipping & returns</li>
+            <li>Secure shopping</li>
+            <li>Testimonials</li>
+            <li>Award winning</li>
+            <li>Ethical trading</li>
+        </ul>
+        <ul class="footer-links">
+            Your account
+            <li>Sign in</li>
+            <li>Register</li>
+            <li>View cart</li>
+            <li>View your lookbook</li>
+            <li>Track an order</li>
+            <li>Update information</li>
+        </ul>
+        <ul class="footer-links">
+            Lookbook
+            <li>Latest posts</li>
+            <li>Men’s lookbook</li>
+            <li>Women’s lookbook</li>
+            <li>Lookbooks RSS feed</li>
+            <li>View your lookbook</li>
+            <li>Delete your lookbook</li>
+        </ul>
+        <div class="contact">
+            <div class="title">contact details</div>
+            <div class="address">Head Office: Avenue Fashion,<br>
+                180-182 Regent Street, London.
+            </div>
+            <div class="phone">Telephone: 0123-456-789<br>
+                Email: support@yourwebsite.com
+            </div>
+        </div>
+    </div>
+    <div class="footer__banners wrapper">
+        <div class="banner-award">
+            <div class="banner-title">award winner</div>
+            <div class="banner-subtitle">fashion awards 2016</div>
+        </div>
+        <div class="banner-social">
+            <a href="#" target="_blank">
+                <img alt="Facebook" class="img-social" src="img/facebook.svg">
+            </a>
+            <a href="#" target="_blank">
+                <img alt="Twitter" class="img-social" src="img/twitter.svg">
+            </a>
+            <a href="#" target="_blank">
+                <img alt="Instagram" class="img-social" src="img/instagram.svg">
+            </a>
+            <a href="https://ru.pinterest.com/" target="_blank">
+                <img alt="Printerest" class="img-social" src="img/pinterest.svg">
+            </a>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        <div class="copyright wrapper">
+            <div>© 2016 Avenue Fashion™</div>
+            <div>Design by RobbyDesigns.com&nbsp; &nbsp; &nbsp; &nbsp; Dev by Loremipsum.com</div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/mapbox.js"></script>
+</body>
+</html>
