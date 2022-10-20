@@ -242,6 +242,7 @@
   color: #8e8c8c;
   margin-bottom: 30px;
   height: 100px;
+  text-align: justify;
 }
 .stores__store .store-button {
   width: 218px;
@@ -319,6 +320,7 @@
 .footer__links {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 62px 0;
 }
 .footer__links .footer-links {
@@ -334,6 +336,7 @@
   line-height: 2.14;
   color: #727272;
   cursor: pointer;
+  margin-right: 30px;
 }
 .footer__links .footer-links li:first-child {
   margin-top: 32px;
