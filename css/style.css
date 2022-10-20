@@ -36,6 +36,7 @@
   display: flex;
   align-items: center;
   height: 100%;
+  white-space: nowrap;
 }
 .header__top-bar .top-bar .links > * {
   margin-right: 50px;
